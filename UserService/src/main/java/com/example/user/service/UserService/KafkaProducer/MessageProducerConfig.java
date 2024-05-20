@@ -13,4 +13,9 @@ public class MessageProducerConfig {
         public void sendMessage(String topic, String message) {
             kafkaTemplate.send(topic, message);
         }
+
+
+        public void sendMessage1(String topic, String message) {
+            kafkaTemplate.send(topic, message);
+        }
 }

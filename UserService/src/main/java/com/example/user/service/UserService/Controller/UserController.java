@@ -2,6 +2,7 @@ package com.example.user.service.UserService.Controller;
 
 import com.example.user.service.UserService.Model.User;
 import com.example.user.service.UserService.USERService.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,6 +12,8 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
+@CrossOrigin("*")
+@Slf4j
 public class UserController {
 
     @Autowired
@@ -30,6 +33,7 @@ public class UserController {
 
     @GetMapping
     public ResponseEntity<Object> getAllUser() {
+
         List<User> allUser = userService.getAllUser();
         return ResponseEntity.ok(allUser);
     }

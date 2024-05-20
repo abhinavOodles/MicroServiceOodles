@@ -19,4 +19,10 @@ public class KafkaController {
         return "Message sent: " + message;
     }
 
+    @PostMapping("/send1")
+    public String send1Message (@RequestParam String message){
+        messageProducer.sendMessage1("my-topic-1",message);
+        return "Message sent: "+message ;
+    }
+
 }

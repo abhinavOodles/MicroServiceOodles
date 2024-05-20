@@ -7,18 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="HotelService" />
-        <module name="UserService" />
         <module name="api-gateway" />
-        <module name="RibbonLoadBalancer" />
+        <module name="HotelService" />
         <module name="ServiceRegistry" />
+        <module name="UserService" />
         <module name="RatingService" />
+        <module name="demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="apigateway" target="17" />
       <module name="ApiGateWay" target="17" />
       <module name="hotel-service" target="17" />
+      <module name="RibbonLoadBalancer" target="17" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -31,6 +32,7 @@
       <module name="UserService" options="-parameters" />
       <module name="api-gateway" options="-parameters" />
       <module name="apigateway" options="-parameters" />
+      <module name="demo" options="-parameters" />
       <module name="hotel-service" options="-parameters" />
     </option>
   </component>
